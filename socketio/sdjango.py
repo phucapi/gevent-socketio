@@ -40,6 +40,8 @@ def autodiscover():
             app_path = import_module(app).__path__
         except AttributeError:
             continue
+        except ImportError:
+            continue
 
         try:
             imp.find_module('sockets', app_path)

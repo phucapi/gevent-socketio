@@ -250,8 +250,8 @@ class WebsocketTransport(BaseTransport):
                 try:
                     websocket.send(message)
                 except (WebSocketError, TypeError) as e:
-                    print(e)
-                    raise
+                    #print(e)
+                    #raise
                     # We can't send a message on the socket
                     # it is dead, let the other sockets know
                     socket.disconnect()
